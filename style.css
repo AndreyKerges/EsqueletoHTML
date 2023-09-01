@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.conteudo{
+    flex-grow: 1;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+
+nav,aside{
+    flex-basis: 100px;
+    flex-shrink: 0;
+}
+
+header, footer{
+    background-color: #FF00FF;
+    height: 50px;
+}
+
+main{
+    background-color: 	lightgray;
+    flex-grow: 1;
+}
+
+nav{
+    background-color: #00FF00;
+}
+
+aside{
+    background-color: #00FFFF;
+}
+
+@media (max-width: 450px) {
+    .conteudo{
+        flex-direction: column;
+    }
+    main{
+        order: -1;
+    }
+    aside{
+        display: none;
+    }
+}
+
+::selection{
+    background-color: black;
+    color: white;
+}
+
